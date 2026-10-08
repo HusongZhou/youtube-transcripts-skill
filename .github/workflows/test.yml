@@ -1,0 +1,21 @@
+name: Offline regression
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.12.3"
+      - run: uv run --python 3.12 tests/test_youtube_batch.py
+      - run: uv run --python 3.12 skills/youtube-transcripts/scripts/fetch_videos.py --help

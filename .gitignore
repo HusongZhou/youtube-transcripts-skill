@@ -1,0 +1,8 @@
+Videos/
+.env
+.env.*
+.venv/
+__pycache__/
+*.py[cod]
+.uv-cache/
+*.tmp
