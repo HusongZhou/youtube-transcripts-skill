@@ -1,6 +1,6 @@
 # Validation record
 
-Local release candidate checked on 2026-10-07 (America/Los_Angeles).
+Early public release checked on 2026-10-07 (America/Los_Angeles).
 
 | Check | Result |
 |---|---|
@@ -12,7 +12,8 @@ Local release candidate checked on 2026-10-07 (America/Los_Angeles).
 | Caption fetch | `EWvNQjAaOHw`: English automatic captions, 3,475 segments; success manifest |
 | Copied skill invoked from another working directory | Existing result returned verified cache SKIP |
 | Source inspection | No personal absolute paths, APPDATA runtime lookup, .exe entrypoint or PowerShell requirement |
-| macOS/Linux | Offline CI configured; not executed locally or remotely yet |
+| Windows/macOS/Linux GitHub Actions | 12 offline tests and CLI --help passed on all three hosted runners; [run evidence](https://github.com/HusongZhou/youtube-transcripts-skill/actions/runs/37712423667) |
+| macOS/Linux live YouTube fetching | Not tested yet |
 | Completely new Windows machine | Not tested; isolated dependencies on the existing Windows host were tested |
 | Automatic natural-language selection in new Codex/Claude sessions | Not yet independently exercised for this release candidate |
 
@@ -20,4 +21,4 @@ Live output and uv caches are outside the release package. Offline tests contain
 
 The core was adapted from an earlier Windows implementation. Existing user-level tools, shared skills, hooks and agent configuration were not replaced.
 
-Before public release: select the repository owner/name and tag, execute the configured CI after upload, and arrange fresh-machine/client trials. MIT was explicitly selected by the user.
+Published to [HusongZhou/youtube-transcripts-skill](https://github.com/HusongZhou/youtube-transcripts-skill) for early feedback. No version tag has been created. Fresh-machine/client trials are the next source of evidence. MIT was explicitly selected by the user.

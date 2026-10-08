@@ -19,7 +19,7 @@
 
 直接复制上面整段即可。助手完成安装后，无需再手动执行下面的步骤；客户端可能仍需你批准下载或文件写入。
 
-其他软件如果支持本地 Skill、文件安装和 shell 执行，也可以采用这种方式，但技能目录可能不同。Windows、macOS、Linux 使用同一个 Python 入口；目前只有 Windows 已实测。
+其他软件如果支持本地 Skill、文件安装和 shell 执行，也可以采用这种方式，但技能目录可能不同。Windows、macOS、Linux 使用同一个 Python 入口；三平台离线 CI 均已通过。真实 YouTube 抓取已在 Windows 实测，Mac/Linux 的真实抓取仍待用户试用。
 
 ## 手动安装（备用）
 
@@ -100,7 +100,7 @@ Markdown 约每分钟合并一组；未知频道/日期保持 unknown。相同�
 uv run tests/test_youtube_batch.py
 ```
 
-离线测试使用自造字幕与模拟网络，不访问 YouTube。CI 已配置 Windows、macOS、Linux + Python 3.12；实际执行情况见 [VALIDATION.md](VALIDATION.md)，配置完成不代表远端 CI 已通过。
+离线测试使用自造字幕与模拟网络，不访问 YouTube。CI 已配置 Windows、macOS、Linux + Python 3.12；实际执行情况见 [VALIDATION.md](VALIDATION.md)，[首次三平台 CI](https://github.com/HusongZhou/youtube-transcripts-skill/actions/runs/37712423667) 均已通过。
 
 源码采用 [MIT](LICENSE)；上游工具与字幕版权说明见 [THIRD_PARTY.md](THIRD_PARTY.md)。不包含上游二进制、虚拟环境、个人配置或真实字幕样本。
 

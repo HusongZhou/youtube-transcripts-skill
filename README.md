@@ -19,7 +19,7 @@ Tell me where it was installed, whether verification passed, and whether I need 
 
 Paste the prompt as-is. No manual installation steps are needed when the assistant completes this request. You may still need to approve downloads or file writes in your client.
 
-Other assistants can use this approach if they support local skills, file installation and shell execution; their skill directories may differ. Windows, macOS and Linux use the same Python entrypoint; only Windows has been tested so far.
+Other assistants can use this approach if they support local skills, file installation and shell execution; their skill directories may differ. Windows, macOS and Linux use the same Python entrypoint; offline CI has passed on all three platforms. Live YouTube fetching has been tested on Windows; macOS/Linux live fetching remains to be tried by users.
 
 ## Manual install (fallback)
 
@@ -100,7 +100,7 @@ Automatic captions, machine translations and LLM interpretation can be wrong. Ca
 uv run tests/test_youtube_batch.py
 ```
 
-Tests use invented captions and mocked network clients; they do not contact YouTube. CI is configured for Windows, macOS and Linux with Python 3.12. See [VALIDATION.md](VALIDATION.md) for what has actually run. Configured CI is not evidence of a successful remote run.
+Tests use invented captions and mocked network clients; they do not contact YouTube. CI is configured for Windows, macOS and Linux with Python 3.12. See [VALIDATION.md](VALIDATION.md) for what has actually run. The initial [three-platform CI run](https://github.com/HusongZhou/youtube-transcripts-skill/actions/runs/37712423667) passed.
 
 ## License and sources
 
